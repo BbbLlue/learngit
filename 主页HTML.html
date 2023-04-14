@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Bblue" content="width=device-width,initial-scale=1">
+    <title>泡泡蓝</title>
+</head>
+<script>
+    function intro(){
+        document.getElementById("intro").innerHTML="姓名：赵兰兰 <br>性别：女<br> 学号：2022090902021<br>联系方式：电话-19102847039";
+    }
+    function inter(){
+        document.getElementById("incontent").innerHTML=" <br><br>1.运动！都不精通但是通通都很喜欢！<br>2.手工！很有趣很放松的活动！<br>3.唱歌！主打一个自信<br>4.编程？希望以后会变成我的特长";
+    }
+    
+</script>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* body 样式 */
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+    
+    /* 标题 */
+    .header {
+        
+        padding: 80px;
+        text-align: center;
+        background: #ffadad;
+        animation: my 5s;
+        -webkit-animation: my 5s;
+        color: #fffeb7;
+    }
+    img{
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    @keyframes my{
+        from {background: #ffadad;}
+        to {background:#f75f5f ;}
+    }
+   
+    
+    /* 标题字体加大 */
+    .header h1 {
+        font-size: 40px;
+    }
+    
+    /* 导航 */
+    .navbar {
+        overflow: hidden;
+        background-color: #ffdfaf;
+    }
+    
+    /* 导航栏样式 */
+    .navbar a {
+        float: left;
+        display: block;
+        color: #fffeb7;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    
+    /* 右侧链接*/
+    .navbar a.right {
+        float: right;
+    }
+    
+    /* 鼠标移动到链接的颜色 */
+    .navbar a:hover {
+        background-color: #f2bb7b;
+        color: black;
+    }
+    
+    /* 列容器 */
+    .row {  
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+    }
+    
+    /* 创建两个列 */
+    /* 边栏 */
+    .side {
+        -ms-flex: 40%; /* IE10 */
+        flex: 40%;
+        background-color: #ffdede;
+        padding: 20px;
+        color: #fffeb7;
+    }
+    
+    /* 主要的内容区域 */
+    .main {   
+        -ms-flex: 60%; /* IE10 */
+        flex: 60%;
+        background-color: #fdf5ca;
+        padding: 20px;
+        color:#f39ac6;
+    }
+    
+    #intro{
+        height: 150px;
+        background-color: #ffadad;
+        padding: 20px;
+        font-size: 18px;
+    }
+    
+    /* 底部 */
+    .footer {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        background: #f39ac6;
+    }
+    .monster {
+        margin: 10px;
+        padding: 0px;
+        position: relative;
+        animation: mymove 5s linear 2s infinite alternate;
+    }
+    .button{
+        background-color: #ffadad;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto;
+        color:#fffeb7;
+        border-color: #ffdfaf;
+    }
+    
+    .button:hover{
+        background-color: #f39ac6;
+    }
+    #incontent{
+        color: #fffeb7;
+        background-color: #ffadad;
+        height: 160px;
+        font-size:20px;
+    }
+    #saying{
+        color: #ffadad;
+        background-color:#ffdfaf;
+        height: 320px;
+        font-size:20px;
+    }
+    #shuo{
+        text-align: center;
+        font-weight: bolder;
+    }
+    @keyframes mymove{
+        0% {left:0px; bottom:0px;}
+        100% {left:1200px; bottom:0px;}
+    }
+    
+    /* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+    @media screen and (max-width: 700px) {
+        .row {   
+            flex-direction: column;
+        }
+    }
+    
+    /* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+    @media screen and (max-width: 400px) {
+        .navbar a {
+            float: none;
+            width: 100%;
+        }
+    }
+    </style>
+
+
+<body>
+    <div class="header">
+        <h1>欢迎认识我！</h1>
+        <img src="https://gd-hbimg.huaban.com/0a084409c65462775dd3afdf05cb07a95e801397186a4-x3tleM_fw1200" >
+        <div id="pic"></div>
+
+    </div>
+
+    <div class="navbar">
+        <a href="#basic"> BASIC </a>
+        <a href="#interest"> INTEREST </a>
+        <a href="#more" class="right"> MORE </a>
+    </div>
+    <div class="row">
+        <div class="side">
+            <button id="basic" class="button" onclick="intro();">我是谁</button>
+            <div id="intro"></div>
+            <button id="interest" class="button" onclick="inter();">我的兴趣</button>
+            <div id="incontent"> </div>
+        </div>
+        <div class="main" id="more">
+            <h1 id="shuo">说点啥吧</h1>
+                <div id="saying">因为大一上不清楚自己想要什么，所以过得特别迷茫，其实就相当于摆烂了。人一旦过了摆烂的生活，就很难再找到学习的状态和热情。其实我非常感谢这次的招新机会。能让我坐在图书馆里，去从零开始探索一个新的方向，真正的沉浸在自己学习的东西里头，可能结果不是特别的好，但是起码过程是有意义的。<br>
+                    然后我选择的方向是前端，因为它是可视化的，可能更能激励我坚持下去。开始我进行了一个前端三件套的文字教程的学习，新知识涌入脑海的感觉非常好！但是打开招新题目，才发现前端的知识真的很零碎，根本无从下手。经过多方面的搜索、借鉴、理解，看着运行出来的页面越来越漂亮，还是非常有成就感的！其中也遇见了很多的困难，常常想要放弃，但是怀着一颗总要交出点什么的心，还是坚持着！<br>
+                    总之这是一段非常珍贵的经历，当然还是非常希望可以加入工作室，和更多有经验的伙伴一起学习成长！</div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <div class="monster"><img src="https://gd-hbimg.huaban.com/825b307a0e2ff32d02d6c287616eadb9bf1683933200-2mFuuC_fw1200"></div>
+      </div>
+</body>
+</html>
