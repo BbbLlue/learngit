@@ -7,11 +7,14 @@
     <title>mybli</title>
     <link rel="stylesheet" href="css/bindex.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 引入我们首页的js文件 -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/bindex.js"></script>
 
 </head>
 
-<body>
-    <script src="js/bindex.js"></script>
+<>
     <div class="header">
         <ul class="sort">
             <li class="icon1"><a href="">首页</a></li>
@@ -154,6 +157,25 @@
 
     <div class="container">
         <div class="carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/cor1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor6.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor8.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/cor9.png" alt=""></div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
         <div class="video-card">
             <div class="videobox">
@@ -168,7 +190,7 @@
                         </div>
                     </div>
                     <div class="videothing">
-                        <video class='video' src="images/hiphop.mp4"></video>
+                        <video class='video' src="images/hiphop.mp4" muted></video>
                     </div>
                 </a>
             </div>
@@ -187,6 +209,8 @@
             </div>
         </div>
     </div>
-</body>
+
+
+    </body>
 
 </html>

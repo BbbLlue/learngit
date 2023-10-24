@@ -71,7 +71,7 @@
 }
 .header .gamemore {
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   top: 60px;
   left: 65px;
   width: 400px;
@@ -282,7 +282,6 @@
   width: 243px;
   height: 66px;
   margin-top: 22px;
-  background-color: pink;
   border-left: 1px solid #61666d;
 }
 .channel .channel-itemsr li {
@@ -309,12 +308,39 @@
   overflow: hidden;
   width: 530px;
   height: 381px;
-  background-color: red;
   float: left;
+}
+.container .carousel .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.container .carousel .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  z-index: 1;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 530px;
+  height: 381px;
+}
+.container .carousel .swiper-slide img {
+  width: 100%;
+  height: 100%;
 }
 .container .video-card {
   float: left;
-  background-color: yellow;
   width: 255px;
   height: 218px;
   position: relative;
