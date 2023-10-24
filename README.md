@@ -4,7 +4,7 @@
 index.html为首页
 
 main.html相关链接只制作了photowall 和article部分
-#### 说明
+#### 学习
 1.精灵图的响应式制作，使用rem 和flexibel 
 
 2.js jq 的使用
@@ -13,7 +13,7 @@ main.html相关链接只制作了photowall 和article部分
 swiper插件制作轮播图
 
 导航栏游戏可下拉
-#### 说明
+#### 学习
 1.去除输入框和按钮的空隙
 去掉标签之间的空格
 
